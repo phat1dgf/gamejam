@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
         enemy.GetComponentInChildren<SpriteRenderer>().color = RandomColor();
         enemy.tag = _enemyTag;
         enemy.SetActive(true);
+        enemy.GetComponentInChildren<Animator>().SetInteger("FORM", Random.Range(0, 2));
     }
     void SpawnEnemies()
     {
@@ -119,7 +120,8 @@ public class GameManager : MonoBehaviour
         return resultColor;
 
     }
-   
+  
+
     enum COLOR
     {
         RED = 1,
