@@ -47,7 +47,7 @@ public class CircleOutline : MonoBehaviour
         return color;
     }
 
-    void CreatePoints()
+    private void CreatePoints()
     {
         float angle = 0f;
         for (int i = 0; i <= segments; i++)
